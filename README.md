@@ -1,5 +1,6 @@
 # MachineLearning
 Implementation Algorithm of MachineLearning
+### 监督学习 Supervised Learning/Classification
 * 1.Decision Tree 
         [*决策树算法*](https://github.com/ZPWX/MachineLearning/tree/master/MachineLearning/04-ML-DTree)
 * 2.K-Nearest Neighbor  [*最近邻近规则算法*](https://github.com/ZPWX/MachineLearning/tree/master/MachineLearning/04-ML-KNN)
