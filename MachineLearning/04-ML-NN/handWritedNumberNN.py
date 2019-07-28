@@ -6,3 +6,4 @@ from NeuralNetwork import NeuralNetwork
 from sklearn.cross_validation import train_test_split
 
 digits = load_digits()
+
