@@ -40,8 +40,8 @@ class NeuralNetwork:
             
     def fit(self, X, y, learning_rate = 0.2, epochs = 10000):
         X = np.atleast_2d(X)
-        temp = np.ones([X.shape(0), X.shape[1] + 1])
-        temp[:, 0:-1] = X
+        temp = np.ones([X.shape[0], X.shape[1] + 1])
+        temp[:, 0:-1] = X  # adding the bias unit to the input layer
         X = temp
         y = np.array(y) 
         
@@ -51,8 +51,8 @@ class NeuralNetwork:
             a = [X[i]]
             
             
-            for l in range(len(self.weights)):
-                a.append(self.activation(np.dot(a[l], self.weights[l])))
+            for l in range(len(self.weights)):  #going forward network, for each layer
+                a.append(self.activation(np.dot(a[l], self.weights[l])))  #Computer the node value for each layer(O_i)using activation function
                 
             error = y[i] - a[-1]
             
@@ -60,7 +60,7 @@ class NeuralNetwork:
             
             
             
-            # starting backprobagation
+            # starting Backpropagtion
             
             for l in range(len(a) - 2, 0, -1):
                 deltas.append(deltas[-1].dot(self.weights[l].T)*self.activation_deriv(a[l]))
@@ -71,7 +71,7 @@ class NeuralNetwork:
             for i in range(len(self.weights)):
                 layer = np.atleast_2d(a[i])
                 delta = np.atleast_2d(deltas[i])
-                self.weights[i] += learning_rate * layer.T.dot(deltas)
+                self.weights[i] += learning_rate * layer.T.dot(delta)
                 
                 
     def predict(self, x):
@@ -79,8 +79,8 @@ class NeuralNetwork:
         temp = np.ones(x.shape([0] + 1))
         temp[0:-1] = x
         a = temp
-        for i in range(0, len(self.weights)):
-            a = self.activation(np.dot(a, self.weights[1]))
+        for l in range(0, len(self.weights)):
+            a = self.activation(np.dot(a, self.weights[l]))
             
         return a
                 
