@@ -2,7 +2,7 @@ import numpy as np
 import random
 #from scipy.ndimage.measurements import variance
 #from scipy.stats._continuous_distns import alpha
-#@from numpy import gradient
+#from numpy import gradient
 #from numpy import shape
 #from numpy import shape
 #from scipy.constants.constants import alpha
