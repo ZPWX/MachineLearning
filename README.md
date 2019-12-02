@@ -8,8 +8,8 @@ Implementation Algorithm of MachineLearning
 * 4.Neural Network  [*神经网络算法*](https://github.com/ZPWX/MachineLearning/tree/master/MachineLearning/04-ML-NN)
 * 5.Linear Regression  [*线性回归方程*](https://github.com/ZPWX/MachineLearning/tree/master/MachineLearning/04-ML-LR)
 ###  非监督学习  unSupervised learning/clustering
-* 1.
-* 2.
+* 
+* 
 
 <br><br>__~~算法的功能只是数据的处理方法，而对于机器学习来说最重要的就是数据的处理方法。<br>
 恰恰算法刚好解决了对于机器学习所依赖的处理大量数据问题。而程序的编码只是搭载计算机的<br>
